@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Contributions Visualization Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>GitHub Contributions Visualization Tool</h1>
+    <div class="input-container">
+      <input type="text" id="username" placeholder="GitHub username" />
+      <input
+        type="number"
+        id="days"
+        placeholder="Number of days"
+        min="1"
+        max="365"
+        value="365"
+      />
+      <button onclick="visualizeContributions()">
+        Visualize Contributions
+      </button>
+    </div>
+    <div id="loading">
+      <div class="spinner"></div>
+      Loading contributions...
+    </div>
+    <div id="error"></div>
+    <div id="contributionGraph"></div>
+    <div class="tooltip" id="tooltip"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
